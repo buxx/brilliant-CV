@@ -99,7 +99,7 @@
 )}
 
 #let headerQuoteStyle(str) = {text(
-  size: 16pt,
+  size: 22pt,
   weight: "medium",
   style: "italic",
   fill: accentColor,
@@ -364,7 +364,8 @@
   location: "Location",
   description: "Description",
   logo: "",
-  tags: ()
+  tags: (),
+  vdiff: -3pt
 ) = {
   let ifSocietyFirst(condition, field1, field2) = {
     return if condition {field1} else {field2}
@@ -400,6 +401,7 @@
       {entryB2Style(ifSocietyFirst(varEntrySocietyFirst, date,location))},
     )
   )
+  v(vdiff)
   entryDescriptionStyle(description)
   entryTagListStyle(tags)
 }
